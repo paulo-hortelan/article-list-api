@@ -1,4 +1,5 @@
 const articles = require("../api/article/article");
+const { v4: uuidv4 } = require("uuid");
 
 module.exports = function (server) {
     server.get("/", function (req, res) {
@@ -21,9 +22,10 @@ module.exports = function (server) {
     server.post("/articles", function (req, res) {
         if (articles.length < 300) {
             const article = {
-                id: articles.length + 1,
+                id: uuidv4(),
                 titulo: req.body.titulo,
                 link: req.body.link,
+                data: new Date(),
             };
             articles.push(article);
             res.send(article);
