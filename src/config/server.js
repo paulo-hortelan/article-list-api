@@ -1,4 +1,4 @@
-const port = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3000;
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -9,8 +9,8 @@ server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
 server.use(allowCors);
 
-server.listen(port, function () {
-    console.log(`Backend is running on port ${port}`);
+server.listen(PORT, function () {
+    console.log(`Backend is running on port ${PORT}`);
 });
 
 module.exports = server;
