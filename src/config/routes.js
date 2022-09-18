@@ -1,4 +1,5 @@
 const articles = require("../api/article/article");
+const devgoCrawler = require("../api/webcrawler/devgo");
 const { v4: uuidv4 } = require("uuid");
 
 module.exports = function (server) {
@@ -43,5 +44,11 @@ module.exports = function (server) {
         article.titulo = req.body.titulo;
         article.link = req.body.link;
         res.send(titulo);
+    });
+
+    server.get("/webcrawler/devgo", function (req, res) {
+        devgoCrawler.getCrawlerDevgo().then((resp) => {
+            res.send(resp);
+        });
     });
 };
