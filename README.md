@@ -44,3 +44,47 @@ Método    | Endpoint | Descrição
 Exemplo 2 | R$ 8
 Exemplo 3 | R$ 7
 Exemplo 4 | R$ 8
+
+# Exemplos
+
+<details>
+  <summary>GET</summary>
+  
+  - Request
+  
+  ```
+  localhost:3003/articles ou https://article-list-api.herokuapp.com/articles
+  ```
+  - Response
+  ```
+  [
+    {
+      "id":"d6e17e23-010b-4177-b519-7a87a5d1876f",
+      "titulo":"O que são testes automatizados",
+      "link":"https://devgo.com.br/o-que-sao-testes-automatizados",
+      "data":"2022-09-18T21:52:55.108Z"
+    }
+  ]
+  ```
+</details>
+
+<details>
+  <summary>POST</summary>
+  
+  - Request
+  
+  ```
+  localhost:3003/articles ou https://article-list-api.herokuapp.com/articles
+  ```
+  - Response
+  ```
+  [
+    {
+      "id":"d6e17e23-010b-4177-b519-7a87a5d1876f",
+      "titulo":"O que são testes automatizados",
+      "link":"https://devgo.com.br/o-que-sao-testes-automatizados",
+      "data":"2022-09-18T21:52:55.108Z"
+    }
+  ]
+  ```
+</details>
