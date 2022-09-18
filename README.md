@@ -39,11 +39,12 @@ $ npm start
 É possível adicionar, alterar e remover os artigos. Para realizar tais ações, basta acessar os métodos descritos abaixo
 
 Método    | Endpoint | Descrição
-:-------: | :------: | :------:
-  `GET`   | `/articles` | Retorna um JSON com a lista dos artigos salvos
-Exemplo 2 | R$ 8
-Exemplo 3 | R$ 7
-Exemplo 4 | R$ 8
+:-------: | :------: | :------
+  `GET`   | `/articles` | Retorna um JSON com todos os artigos salvos
+  `GET`   | `/articles/:id` | Retorna apenas um artigo, de acordo com o id fornecido
+  `POST`  | `/articles` | Adiciona um artigo e retorna o ultimo artigo adicionado
+  `PUT`  | `/articles/:id` | Altera um artigo e retorna o artigo alterado
+  `DELETE`   | `/articles/:id` | Deleta um artigo, de acordo com o id fornecido
 
 # Exemplos
 
