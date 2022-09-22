@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require("uuid");
 
 module.exports = function (server) {
     server.get("/", function (req, res) {
-        res.send("Hello World");
+        res.send("Bem vindo a API ");
     });
 
     server.get("/articles", function (req, res) {
@@ -12,7 +12,7 @@ module.exports = function (server) {
     });
 
     server.get("/articles/:id", function (req, res) {
-        const article = articles.find((c) => c.id === parseInt(req.params.id));
+        const article = articles.find((c) => c.id === req.params.id);
         if (!article)
             return res
                 .status(404)
@@ -36,14 +36,26 @@ module.exports = function (server) {
     });
 
     server.put("/articles/:id", function (req, res) {
-        const article = articles.find((c) => c.id === parseInt(req.params.id));
+        const article = articles.find((c) => c.id === req.params.id);
         if (!article)
             return res
                 .status(404)
                 .send("The article with the given id was not found");
         article.titulo = req.body.titulo;
         article.link = req.body.link;
-        res.send(titulo);
+        res.send(article);
+    });
+
+    server.delete("/articles/:id", function (req, res) {
+        const article = articles.find((c) => c.id === req.params.id);
+        if (!article)
+            return res
+                .status(404)
+                .send("The article with the given id was not found");
+
+        let index = articles.map((item) => item.id).indexOf(req.params.id);
+        if (index > -1) articles.splice(index, 1);
+        res.send("The article was sucessfully deleted");
     });
 
     server.get("/webcrawler/devgo", function (req, res) {
