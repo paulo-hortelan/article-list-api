@@ -1,4 +1,5 @@
 const articles = require("../api/article/article");
+const webCrawlers = require("../api/webcrawler/webcrawlers");
 const devgoCrawler = require("../api/webcrawler/devgo");
 const { v4: uuidv4 } = require("uuid");
 
@@ -58,7 +59,11 @@ module.exports = function (server) {
         res.send("The article was sucessfully deleted");
     });
 
-    server.get("/webcrawler/devgo", function (req, res) {
+    server.get("/webcrawlers", function (req, res) {
+        res.send(webCrawlers);
+    });
+
+    server.get("/webcrawlers/devgo", function (req, res) {
         devgoCrawler.getCrawlerDevgo().then((resp) => {
             res.send(resp);
         });
