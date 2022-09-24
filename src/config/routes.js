@@ -5,11 +5,15 @@ const { v4: uuidv4 } = require("uuid");
 
 module.exports = function (server) {
     server.get("/", function (req, res) {
-        res.send("Bem vindo a API ");
+        res.send("Bem vindo a Article List API");
     });
 
     server.get("/articles", function (req, res) {
-        res.send(articles);
+        const articlesSorted = articles.sort((a, b) => {
+            return b.data - a.data;
+        });
+
+        res.send(articlesSorted);
     });
 
     server.get("/articles/:id", function (req, res) {
