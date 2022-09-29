@@ -1,6 +1,6 @@
 # Article List API
 
-Este projeto é uma API desenvolvida em `Node.js` e `Express` e que pode ser acessado através do site ...
+Este projeto é uma API desenvolvida em `Node.js` e `Express` e que pode ser acessado através do site [Article List API](https://article-list-api.herokuapp.com)
 
 ## Funcionalidades do projeto
 
