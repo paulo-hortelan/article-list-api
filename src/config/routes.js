@@ -1,6 +1,7 @@
 const articles = require("../api/article/article");
 const webCrawlers = require("../api/webcrawler/webcrawlers");
 const devgoCrawler = require("../api/webcrawler/devgo");
+const theenemyCrawler = require("../api/webcrawler/theenemy");
 const { v4: uuidv4 } = require("uuid");
 
 module.exports = function (server) {
@@ -69,6 +70,12 @@ module.exports = function (server) {
 
     server.get("/webcrawlers/devgo", function (req, res) {
         devgoCrawler.getCrawlerDevgo().then((resp) => {
+            res.send(resp);
+        });
+    });
+
+    server.get("/webcrawlers/theenemy", function (req, res) {
+        theenemyCrawler.getCrawlerTheEnemy().then((resp) => {
             res.send(resp);
         });
     });
