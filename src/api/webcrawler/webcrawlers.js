@@ -1,9 +1,9 @@
 const webCrawlers = [
     {
-        nome: "DevGo",
+        nome: "TheEnemy",
     },
     {
-        nome: "TheEnemy",
+        nome: "DevGo",
     },
 ];
 
