@@ -1,6 +1,6 @@
 # Article List API
 
-Este projeto é uma API desenvolvida em `Node.js` e `Express` e que pode ser acessado através do site [Article List API](https://article-list-api.herokuapp.com)
+Este projeto é uma API desenvolvida em `Node.js` e `Express` e que pode ser acessado através do site [Article List API](https://article-list-api.onrender.com)
 
 ## Funcionalidades do projeto
 
@@ -58,7 +58,7 @@ $ npm start
   - Request
   
   ```
-  localhost:3003/articles ou https://article-list-api.herokuapp.com/articles
+  localhost:3003/articles ou https://article-list-api.onrender.com/articles
   ```
   - Response
   ```
@@ -87,7 +87,7 @@ Atenção para o fato de que no Body o formato a ser usado é o `x-www-form-urle
 O URL pode ser um dos dois:
 
 ```
-localhost:3003/articles:id ou https://article-list-api.herokuapp.com/articles
+localhost:3003/articles:id ou https://article-list-api.onrender.com/articles
 ```
 
 -   Response
@@ -117,7 +117,7 @@ Atenção para o fato de que no Body o formato a ser usado é o `x-www-form-urle
 O URL pode ser um dos dois:
 
 ```
-localhost:3003/articles/:id ou https://article-list-api.herokuapp.com/articles/:id
+localhost:3003/articles/:id ou https://article-list-api.onrender.com/articles/:id
 ```
 
 Em que o `:id` é o id do artigo a ser modificado
@@ -147,7 +147,7 @@ Em que o `:id` é o id do artigo a ser modificado
 O URL pode ser um dos dois:
 
 ```
-localhost:3003/articles/:id ou https://article-list-api.herokuapp.com/articles/:id
+localhost:3003/articles/:id ou https://article-list-api.onrender.com/articles/:id
 ```
 
 Em que o `:id` é o id do artigo a ser deletado
@@ -179,7 +179,7 @@ Em que `:site` é o site que deseja realizar um web crawler e obter os seus arti
   - Request
   
   ```
-  localhost:3003/webcrawlers ou https://article-list-api.herokuapp.com/webcrawlers
+  localhost:3003/webcrawlers ou https://article-list-api.onrender.com/webcrawlers
   ```
   - Response
   ```
@@ -197,7 +197,7 @@ Em que `:site` é o site que deseja realizar um web crawler e obter os seus arti
   - Request
   
   ```
-  localhost:3003/webcrawlers/devgo ou https://article-list-api.herokuapp.com/webcrawlers/devgo
+  localhost:3003/webcrawlers/devgo ou https://article-list-api.onrender.com/webcrawlers/devgo
   ```
   - Response
   ```
